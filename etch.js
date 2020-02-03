@@ -39,6 +39,7 @@ function createAndPlaceRows(n) {
   $(cells).hover(function() {
     console.log("hovering");
     console.log(event.target);
-    $(this).toggleClass("active");
+    //$(this).toggleClass("active");
+    $(this).addClass("active");
   });
 }
