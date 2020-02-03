@@ -6,10 +6,6 @@ $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
-  $(".cell").bind("hover", function() {
-    console.log("hovering");
-    //$(this).toggleClass(".cell.active");
-  });
 });
 
 // ===============================
@@ -40,4 +36,9 @@ function createAndPlaceRows(n) {
   $(".grid").html(rows);
   const cells = $(".cell");
   cells.css({ height: cells.width() });
+  $(cells).hover(function() {
+    console.log("hovering");
+    console.log(event.target);
+    $(this).toggleClass("active");
+  });
 }
