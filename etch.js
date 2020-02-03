@@ -6,6 +6,10 @@ $(() => {
   createAndPlaceRows(8);
 
   // Bind your event listeners here:
+  $(".cell").bind("hover", function() {
+    console.log("hovering");
+    //$(this).toggleClass(".cell.active");
+  });
 });
 
 // ===============================
