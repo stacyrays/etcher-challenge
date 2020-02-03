@@ -1,5 +1,5 @@
+"use strict";
 // Add Event Listeners here:
-
 
 // When DOM is ready:
 $(() => {
@@ -7,12 +7,6 @@ $(() => {
 
   // Bind your event listeners here:
 });
-
-
-
-
-
-
 
 // ===============================
 // Code below is to automate grid creation
@@ -24,12 +18,12 @@ function createRow(cellCount) {
   for (let i = 0; i < cellCount; i++) {
     row += str;
   }
-  row += '</div>';
+  row += "</div>";
   return row;
 }
 
 function createRows(n) {
-  let rows = '';
+  let rows = "";
   for (let i = 0; i < n; i++) {
     rows += createRow(n);
   }
@@ -37,9 +31,9 @@ function createRows(n) {
 }
 
 function createAndPlaceRows(n) {
-  $('.cell').remove(); // Clear all current cells and listeners
+  $(".cell").remove(); // Clear all current cells and listeners
   const rows = createRows(n);
-  $('.grid').html(rows);
-  const cells = $('.cell');
+  $(".grid").html(rows);
+  const cells = $(".cell");
   cells.css({ height: cells.width() });
 }
