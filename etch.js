@@ -36,10 +36,15 @@ function createAndPlaceRows(n) {
   $(".grid").html(rows);
   const cells = $(".cell");
   cells.css({ height: cells.width() });
-  $(cells).hover(function() {
-    console.log("hovering");
-    console.log(event.target);
-    //$(this).toggleClass("active");
+  console.log("hey");
+  $("body").on("mouseenter", ".cell", function(e) {
     $(this).addClass("active");
   });
+
+  // $(cells).hover(function() {
+  //   // console.log("hovering");
+  //   // console.log(event.target);
+  //   //$(this).toggleClass("active");
+  //   $(this).addClass("active");
+  // });
 }
